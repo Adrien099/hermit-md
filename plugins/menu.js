@@ -41,18 +41,18 @@ Function({
 			commandslist[command.type].push((match.length >= 3 ? (HANDLER + mmatch) : command.pattern).trim())
 		}
 	})
-	let msg = `╭━━━〔 ${BOT_INFO.split(";")[0]} ⁩〕━━━┈⊷
-┃✵╭──────────────
-┃✵│ Owner : ${BOT_INFO.split(";")[1]}
-┃✵│ User : ${m.pushName.replace( /[\r\n]+/gm, "" )}
-┃✵│ Plugins : ${commands.length}
-┃✵│ Runtime : ${runtime(process.uptime())}
-┃✵│ Mode : ${MODE}
-┃✵│ Platform : ${os.platform()}
-┃✵│ Ram : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-┃✵│ Version : ${VERSION}
-┃✵╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
+	let msg = `ֶָ֢ ⏜࣪⏜ ֶֶָֺ֢ ⏜︵ 〔 ${BOT_INFO.split(";")[0]} ⁩〕  ︵⏜ֺ ֶֶָָָ֢ ⏜࣪⏜ ֶָ֢
+┃🧸╭──────────────
+┃🌸│ Owner : ${BOT_INFO.split(";")[1]}
+┃🫙│ User : ${m.pushName.replace( /[\r\n]+/gm, "" )}
+┃🧸│ Plugins : ${commands.length}
+┃🌸│ Runtime : ${runtime(process.uptime())}
+┃🫙│ Mode : ${MODE}
+┃🧸│ Platform : ${os.platform()}
+┃🌸│ Ram : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
+┃🫙│ Version : ${VERSION}
+┃🧸╰──────────────
+╰*︶︶͜︶︶ֶ֢︶︶͜︶︶ֶ֢︶︶͜︶︶͜︶︶ֶ֢︶︶͜︶︶ֶ֢︶︶͜︶*
 `
 	for (const command in commandslist) {
 		msg += `╭─────────────┈⊷
@@ -69,7 +69,7 @@ Function({
 	await message.send(msg);
 	/* var img = await parsedUrl(BOT_INFO)
 	if (img.length == 0) {
-		img = ['https://i.imgur.com/qJUBCYm.jpeg']
+		img = ['https://imgur.com/a/atdPaxp']
 	}
 	const image = img[Math.floor(Math.random() * img.length)]
 	const type = image.endsWith('mp4') ? 'video' : 'image'
