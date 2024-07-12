@@ -73,7 +73,7 @@ Function({
 	if (message.reply_message !== false) {
 		if (message.reply_message.data.key.fromMe) return false
 		await message.client.sendMessage(message.jid, {
-			text: `@${message.reply_message.data.participant.split('@')[0]}, Kicked From The Group`,
+			text: `@${message.reply_message.data.participant.split('@')[0]}, Kicked From The Group because he/she was stupid`,
 			mentions: [message.reply_message.data.participant]
 		})
 		await message.client.groupParticipantsUpdate(message.jid, [message.reply_message.data.participant], 'remove')
@@ -257,7 +257,7 @@ Function({
 	pattern: 'left ?(.*)',
 	fromMe: true,
     onlyGroup: true,
-	desc: 'Left from group',
+	desc: 'A baka left from the group',
 	type: 'group'
 }, async (message, text, client) => {
 	await client.groupLeave(message.chat)
